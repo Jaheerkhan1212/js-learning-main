@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul>
+        <li>Javascript</li>
+        <li>python</li>
+    </ul>
+    <script>
+        function addlang(language){
+            const li=document.createElement('li');
+            li.innerHTML=language;
+            document.querySelector('ul').appendChild(li);
+        }
+        addlang("cpp");
+        function optimisedadd(language){
+            const li=document.createElement('li');
+            li.appendChild(document.createTextNode(language));
+            document.querySelector('ul').appendChild(li);   
+        }
+        optimisedadd('django');
+        //edit optimised
+        const python=document.querySelector('li:nth-child(2)');
+        // const li=document.createElement('li');
+        // li.textContent="mojo";
+        // python.replaceWith(li);
+
+        //method2
+        python.outerHTML='<li> jojo </li>';
+
+        //remove
+        const cpp=document.querySelector('li:nth-child(3)');
+        cpp.remove();
+    </script>
+</body>
+</html>

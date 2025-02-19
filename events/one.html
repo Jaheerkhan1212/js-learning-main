@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+   <h1>Chai aur code</h1>
+   <button id="stop">STOP</button> 
+   <script>
+    const changeit=function(){
+        document.querySelector('h1').innerHTML="jaheer";
+    }
+    let timeid=setTimeout(changeit,3000);
+    document.querySelector('#stop').addEventListener('click',(e)=>{
+    clearTimeout(timeid);
+    console.log('stopped');
+    })
+   </script>
+</body>
+</html>
