@@ -131,3 +131,38 @@ function newgame() {
 }
 
 ```
+## project 5
+```javascript
+console.log('Project 5');
+const insert=document.querySelector('#insert');
+window.addEventListener('keydown',(e)=>{
+  console.log(`key is ${e.key}`);
+  console.log(`keycode is ${e.keyCode}`);
+  console.log(`keycode is ${e.code}`);
+});
+```
+
+## project 6
+```javascript
+const body = document.body;
+let id;
+document.querySelector('#start').addEventListener('click', (e) => {
+  if (!id) {
+    id = setInterval(colorchange, 1000);
+  }
+});
+document.querySelector('#stop').addEventListener('click', (e) => {
+  clearInterval(id);
+  id = null;
+  console.log('stopped');
+});
+const colorchange = function () {
+  let red = Math.round(Math.random() * 255);
+  let green = Math.round(Math.random() * 255);
+  let blue = Math.round(Math.random() * 255);
+  console.log('hello');
+  body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+};
+
+```
+
